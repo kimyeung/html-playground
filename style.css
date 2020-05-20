@@ -16,25 +16,25 @@ a {
 
 /* unvisited link */
 a:link {
-  color: #000000;
+  color: #383838;
   text-decoration: none;
 }
 
 /* visited link */
 a:visited {
-  color: #000000;
+  color: #383838;
   text-decoration: none;
 }
 
 /* mouse over link */
 a:hover {
-  color: #000000;
+  color: #383838;
   text-decoration: none;
 }
 
 /* selected link */
 a:active {
-  color: #000000;
+  color: #383838;
   text-decoration: none;
 }
 
@@ -47,7 +47,9 @@ footer {
 
 body {
     background-color: #fcfcfc;
-    color: #000000;
+    margin: auto;
+    width: 960px;
+    color: #383838;
     font-family: brandon-grotesque, sans-serif;
     font-style: normal;
     font-weight: 100;
@@ -73,7 +75,24 @@ body {
   }
 
 form {
-    display: inline-block;;
+    display: inline-block;
+}
+
+#fname { 
+    float:left;
+    padding: 10px;
+} 
+#lname{ 
+    float:right;
+    padding: 10px;
+}
+
+#email{ 
+    padding: 10px;
+}
+
+#form-submit{ 
+    padding: 10px;
 }
 
 input {
@@ -101,4 +120,27 @@ label {
 
 .newsletter {
     text-align: center;
+}
+  
+.tracks {
+  fill: none;
+  stroke: #fcfcfc;
+  stroke-width: 1.5px;
+}
+
+.bodies path {
+  stroke: #000;
+  stroke-width: 0px;
+}
+
+.bodies .text-path {
+  stroke: none;
+}
+
+.bodies text {
+  fill: #000;
+  font-family: brandon-grotesque, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 11pt;
 }
