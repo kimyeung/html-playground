@@ -3,6 +3,14 @@ window.onload = function() {
   let canvas = document.querySelector('#canvas');
   let activeColor = '#556270'
   
+  window.addEventListener('mousedown', function(event) {
+    mouseIsDown = true
+  });
+
+  window.addEventListener('mouseup', function(event) {
+    mouseIsDown = false
+  });
+
   for(let i = 0; i < 6400; i++) {
 
     let pixel = document.createElement('span');
@@ -20,6 +28,12 @@ window.onload = function() {
 
     pixel.addEventListener('click', function(event){
       pixel.style.backgroundColor = activeColor
+    });
+
+    pixel.addEventListener('mouseenter', function(event){
+      if(mouseIsDown){
+        pixel.style.backgroundColor = activeColor;
+      }
     });
 
     canvas.appendChild(pixel);
